@@ -5,6 +5,7 @@ RUN apk update
 RUN apk add curl
 
 RUN echo "PWD is: $PWD"
+RUN echo "WORKDIR is: $WORKDIR"
 RUN echo "PATH is: $PATH"
 
 COPY soapapi/complete/request.xml /home/request.xml
