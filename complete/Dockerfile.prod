@@ -1,0 +1,5 @@
+FROM anapsix/alpine-java
+MAINTAINER Justin Lowry
+
+COPY gs-producing-web-service-0.1.0.jar /home/gs-producing-web-service-0.1.0.jar
+CMD ["java","-jar","/home/gs-producing-web-service-0.1.0.jar"]

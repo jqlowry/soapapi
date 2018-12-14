@@ -38,7 +38,7 @@ public class ApplicationIntegrationTests {
     private Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
 
     @LocalServerPort
-    private int port = 8081;
+    private int port = 8080;
 
     @Before
     public void init() throws Exception {
@@ -52,9 +52,9 @@ public class ApplicationIntegrationTests {
         GetCountryRequest request = new GetCountryRequest();
         request.setName("Spain");
 
-        assertThat(ws.marshalSendAndReceive("http://172.17.0.1:"
+        assertThat(ws.marshalSendAndReceive("http://172.17.0.3:"
                 + port + "/ws", request)).isNotNull();
-        GetCountryResponse test = (GetCountryResponse) ws.marshalSendAndReceive("http://172.17.0.1:"+port+"/ws",request);
+        GetCountryResponse test = (GetCountryResponse) ws.marshalSendAndReceive("http://172.17.0.3:"+port+"/ws",request);
         System.out.println("COUNTRY: "+test.getCountry().getCapital());
     }
 }
