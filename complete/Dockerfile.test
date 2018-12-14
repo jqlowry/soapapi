@@ -4,10 +4,6 @@ MAINTAINER Justin Lowry
 RUN apk update
 RUN apk add curl
 
-RUN echo "PWD is: $PWD"
-RUN echo "WORKDIR is: $WORKDIR"
-RUN echo "PATH is: $PATH"
-
 COPY ./request.xml /home/request.xml
 COPY /var/jenkins_home/workspace/Pipeline-Jenkins/gs-producing-web-service-0.1.0.jar /home/gs-producing-web-service-0.1.0.jar
 
