@@ -19,4 +19,4 @@ fi
 
 json-server $args
 
-exec $@"
+exec "$@"
