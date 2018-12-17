@@ -9,4 +9,5 @@ VOLUME /data
 EXPOSE 80
 ADD run.sh /run.sh
 
-CMD ["/run.sh"]
+ENTRYPOINT ["bash", "/run.sh"]
+CMD []
