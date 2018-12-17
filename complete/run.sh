@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 args="$@"
 
@@ -17,3 +18,5 @@ if [ -f $file ]; then
 fi
 
 json-server $args
+
+exec $@"
