@@ -1,5 +1,4 @@
 FROM anapsix/alpine-java
-MAINTAINER Justin Lowry
 
 RUN apk update
 RUN apk add curl
