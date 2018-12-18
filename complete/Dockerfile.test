@@ -7,4 +7,6 @@ RUN apk add curl
 COPY ./request.xml /home/request.xml
 COPY ./target/gs-producing-web-service-0.1.0.jar /home/gs-producing-web-service-0.1.0.jar
 
+EXPOSE 80
+
 CMD ["java","-jar","/home/gs-producing-web-service-0.1.0.jar"]
