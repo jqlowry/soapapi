@@ -56,6 +56,9 @@ public class ApplicationIntegrationTests {
                 + port + "/ws", request)).isNotNull();
         GetCountryResponse test = (GetCountryResponse) ws.marshalSendAndReceive("http://localhost:"+port+"/ws",request);
 
+        System.out.println("Sent SOAP request " + request.toString());
+
+        System.out.println("SOAP response: " + test.toString());
         System.out.println("COUNTRY: "+test.getCountry().getName());
         System.out.println("CAPITAL: "+test.getCountry().getCapital());
         System.out.println("CURRENCY: "+test.getCountry().getCurrency());
