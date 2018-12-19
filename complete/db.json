@@ -1,7 +1,9 @@
 {
-  "posts": [
-    { "id": 1, "body": "foo" },
-    { "id": 2, "body": "bar" }
+  "Spain": [
+    { "country": "Spain" },
+    { "captial": "Madrid" },
+    { "currency": "EUR" },
+    { "population": "46704314"}
   ],
   "comments": [
     { "id": 1, "body": "baz", "postId": 1 },
